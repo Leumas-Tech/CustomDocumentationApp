@@ -1,0 +1,153 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #333;
+    padding: 1em 0;
+    text-align: center;
+}
+
+header a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+.content-area {
+    padding: 20px;
+}
+
+.card {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin: 15px 0;
+    cursor: pointer;
+    overflow: hidden;             /* Prevent any overflow */
+    text-overflow: ellipsis;     /* Indicate text has been clipped */
+    white-space: nowrap;         /* Prevent text from wrapping to next line */
+}
+
+.render-content-area {
+    border-top: 2px solid #333;
+    padding: 20px;
+}
+
+/* styles.css or wherever your styles are defined */
+
+.horizontal-scroll {
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem; 
+}
+
+.card {
+    display: inline-block;
+    min-width: 250px;
+    padding: 1rem;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    background-color: #fff;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05); 
+}
+
+.card h3, .card p {
+    overflow: hidden;           /* Important: This will prevent text from overflowing */
+    text-overflow: ellipsis;   /* If the text is too long, it will end in '...' */
+    white-space: nowrap;       /* Prevents the text from wrapping */
+    max-width: 90%;            /* Keep a little padding on the right, adjust as needed */
+}
+
+/* Main content area styling */
+#render-content-area {
+    padding: 20px;
+    background: white;
+    border: 2px solid electricblue;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+    overflow: auto;  /* To handle any overflow content */
+    max-width: 800px;  /* Adjust as needed */
+    margin: 0 auto;  /* Centers the box */
+}
+
+#render-content-area p,
+#render-content-area h2 {
+    color: black;
+    font-family: Arial, sans-serif;
+}
+
+#render-content-area a {
+    color: electricblue;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+#render-content-area a:hover {
+    text-decoration: underline;
+    box-shadow: 0px 0px 5px electricblue;
+}
+
+/* API call styling */
+#render-content-area p:first-child {
+    font-weight: bold;
+    margin-top: 0;  /* Adjusts margin for the first element */
+}
+
+/* Title and type styling */
+#render-content-area h2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#render-content-area span {
+    margin-left: 10px;
+    color: gray;
+}
+
+/* Code area and copy button styling */
+pre {
+    background: #f5f5f5;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    white-space: pre-wrap;  /* Keeps the content from overflowing */
+    word-wrap: break-word;
+}
+
+button {
+    background: rgb(15, 160, 250);
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: #003366;  /* A darker shade of blue */
+    box-shadow: 0px 0px 10px electricblue;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+    #render-content-area {
+        padding: 15px;
+    }
+}
+
+
+/* Ensure it looks nice on mobile */
+@media (max-width: 600px) {
+    .card {
+        min-width: calc(100% - 2rem);
+        margin: 1rem;
+    }
+}
