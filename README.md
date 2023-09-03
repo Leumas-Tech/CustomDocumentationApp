@@ -7,7 +7,7 @@ Hello there! 🌟 If you're looking to customize this beautiful documentation te
 1. **Clone the Repository or Download the Files**: 
    - Use git to clone the repository: 
      ```bash
-     git clone <repo-url>
+     git clone [<repo-url>](https://github.com/Leumas-Tech/CustomDocumentationApp)
      ```
    - Alternatively, you can download the files directly from GitHub.
 
